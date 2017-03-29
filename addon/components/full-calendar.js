@@ -238,10 +238,12 @@ export default Component.extend({
     // Curent date
     prev: function() {
       this.$().fullCalendar('prev');
+      this.sendAction('displayedPageChanged');
     },
 
     next: function() {
       this.$().fullCalendar('next');
+      this.sendAction('displayedPageChanged');
     },
 
     prevYear: function() {
